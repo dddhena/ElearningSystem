@@ -178,7 +178,8 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
-    <Content Include="View\LiveChat.aspx" />
+    <Content Include="View\Chat\ChatHistory.aspx" />
+    <Content Include="View\Chat\LiveChat.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
@@ -232,11 +233,18 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="View\LiveChat.aspx.cs">
+    <Compile Include="View\Chat\ChatHistory.aspx.cs">
+      <DependentUpon>ChatHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Chat\ChatHistory.aspx.designer.cs">
+      <DependentUpon>ChatHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Chat\LiveChat.aspx.cs">
       <DependentUpon>LiveChat.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="View\LiveChat.aspx.designer.cs">
+    <Compile Include="View\Chat\LiveChat.aspx.designer.cs">
       <DependentUpon>LiveChat.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
