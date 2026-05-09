@@ -189,6 +189,7 @@
     <Content Include="View\Chat\LiveChat.aspx" />
     <Content Include="View\Feedback\MyProgress.aspx" />
     <Content Include="View\Feedback\SubmitFeedback.aspx" />
+    <Content Include="View\QnA\AskQuestion.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
@@ -251,6 +252,7 @@
     </Compile>
     <Compile Include="View\Account\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="View\Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
@@ -289,6 +291,13 @@
     </Compile>
     <Compile Include="View\Feedback\SubmitFeedback.aspx.designer.cs">
       <DependentUpon>SubmitFeedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\QnA\AskQuestion.aspx.cs">
+      <DependentUpon>AskQuestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\QnA\AskQuestion.aspx.designer.cs">
+      <DependentUpon>AskQuestion.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
