@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="ElearningApplication.View.Account.Login1" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="ElearningApplication.View.Account.Login1" %>
 
 <!DOCTYPE html>
 
@@ -12,7 +12,7 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </div>
         <asp:Panel ID="Panel1" runat="server" Height="666px">
-            <asp:Login ID="Loginpage" runat="server" Height="441px" TitleText="E-LEARNING" UserNameLabelText="Email Address" Width="998px">
+            <asp:Login ID="Loginpage" runat="server" Height="441px" TitleText="E-LEARNING" UserNameLabelText="Email Address" Width="998px" OnAuthenticate="Loginpage_Authenticate">
             </asp:Login>
         </asp:Panel>
     </form>
