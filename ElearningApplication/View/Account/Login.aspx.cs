@@ -36,8 +36,24 @@ namespace ElearningApplication.View.Account
                             Session["UserRole"] = reader["Role"];
                             Session["UserEmail"] = email;
                             
-                            // Redirect based on role or to dashboard
-                            Response.Redirect("~/Default.aspx");
+                            // Redirect based on role
+                            string role = Session["UserRole"]?.ToString();
+                            if (role == "Student")
+                            {
+                                Response.Redirect("~/View/Dashboard/StudentDashboard.aspx");
+                            }
+                            else if (role == "Admin")
+                            {
+                                Response.Redirect("~/View/Dashboard/AdminDashboard.aspx");
+                            }
+                            else if (role == "Instructor")
+                            {
+                                Response.Redirect("~/View/Dashboard/InstructorDashboard.aspx");
+                            }
+                            else
+                            {
+                                Response.Redirect("~/Default.aspx");
+                            }
                         }
                         else
                         {
