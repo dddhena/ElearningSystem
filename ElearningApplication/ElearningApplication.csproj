@@ -17,7 +17,7 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort></IISExpressSSLPort>
+    <IISExpressSSLPort>44301</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -184,6 +184,8 @@
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="View\Account\Login.aspx" />
     <Content Include="View\Account\Register.aspx" />
+    <Content Include="View\Dashboard\AdminDashboard.aspx" />
+    <Content Include="View\Dashboard\InstructorDashboard.aspx" />
     <Content Include="View\Dashboard\StudentDashboard.aspx" />
     <Content Include="View\Chat\ChatHistory.aspx" />
     <Content Include="View\Chat\LiveChat.aspx" />
@@ -256,6 +258,19 @@
     </Compile>
     <Compile Include="View\Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dashboard\AdminDashboard.aspx.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dashboard\AdminDashboard.aspx.designer.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dashboard\InstructorDashboard.aspx.cs">
+      <DependentUpon>InstructorDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Dashboard\InstructorDashboard.aspx.designer.cs">
+      <DependentUpon>InstructorDashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\Dashboard\StudentDashboard.aspx.cs">
       <DependentUpon>StudentDashboard.aspx</DependentUpon>

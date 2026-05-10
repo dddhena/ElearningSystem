@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Drawing;
 using System.Web.UI.DataVisualization.Charting;
 
@@ -47,6 +47,10 @@ namespace ElearningApplication.View.Feedback
         protected void Chart1_Load1(object sender, EventArgs e)
         {
 
+        }
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/View/Dashboard/StudentDashboard.aspx");
         }
     }
 }
