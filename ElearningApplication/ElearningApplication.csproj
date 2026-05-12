@@ -184,12 +184,14 @@
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="View\Account\Login.aspx" />
     <Content Include="View\Account\Register.aspx" />
-    <Content Include="View\Course\CreateCourse.aspx" />
     <Content Include="View\Dashboard\AdminDashboard.aspx" />
     <Content Include="View\Dashboard\InstructorDashboard.aspx" />
     <Content Include="View\Dashboard\StudentDashboard.aspx" />
     <Content Include="View\Chat\ChatHistory.aspx" />
     <Content Include="View\Chat\LiveChat.aspx" />
+    <Content Include="View\Course\CreateCourse.aspx" />
+
+    <Content Include="View\Enrollment\Enrollment.aspx" />
     <Content Include="View\Feedback\MyProgress.aspx" />
     <Content Include="View\Feedback\SubmitFeedback.aspx" />
     <Content Include="View\QnA\AskQuestion.aspx" />
@@ -260,15 +262,9 @@
     <Compile Include="View\Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
-    <Compile Include="View\Course\CreateCourse.aspx.cs">
-      <DependentUpon>CreateCourse.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="View\Course\CreateCourse.aspx.designer.cs">
-      <DependentUpon>CreateCourse.aspx</DependentUpon>
-    </Compile>
     <Compile Include="View\Dashboard\AdminDashboard.aspx.cs">
       <DependentUpon>AdminDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="View\Dashboard\AdminDashboard.aspx.designer.cs">
       <DependentUpon>AdminDashboard.aspx</DependentUpon>
@@ -300,6 +296,21 @@
     </Compile>
     <Compile Include="View\Chat\LiveChat.aspx.designer.cs">
       <DependentUpon>LiveChat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Course\CreateCourse.aspx.cs">
+      <DependentUpon>CreateCourse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Course\CreateCourse.aspx.designer.cs">
+      <DependentUpon>CreateCourse.aspx</DependentUpon>
+    </Compile>
+
+    <Compile Include="View\Enrollment\Enrollment.aspx.cs">
+      <DependentUpon>Enrollment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Enrollment\Enrollment.aspx.designer.cs">
+      <DependentUpon>Enrollment.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\Feedback\MyProgress.aspx.cs">
       <DependentUpon>MyProgress.aspx</DependentUpon>

@@ -181,13 +181,7 @@
                     </asp:DropDownList>
                 </div>
 
-                <div class="form-group">
-                    <label for="txtPrice">Price (birr)</label>
-                    <asp:TextBox ID="txtPrice" runat="server" CssClass="form-control"></asp:TextBox>
-                    <asp:CompareValidator ID="cvPrice" runat="server" ControlToValidate="txtPrice" 
-                        Operator="DataTypeCheck" Type="Double" ErrorMessage="Please enter a valid price" 
-                        Display="Dynamic" CssClass="validation-error"></asp:CompareValidator>
-                </div>
+
 
                 <asp:Button ID="btnCreate" runat="server" Text="Create Course" CssClass="btn-submit" OnClick="btnCreate_Click" BackColor="#CC66FF" />
                 
