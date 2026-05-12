@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -178,6 +178,17 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
+    <Content Include="View\Account\Login.aspx" />
+    <Content Include="View\Account\Register.aspx" />
+    <Content Include="View\Course\CreateCourse.aspx" />
+    <Content Include="View\Dashboard\AdminDashboard.aspx" />
+    <Content Include="View\Dashboard\InstructorDashboard.aspx" />
+    <Content Include="View\Dashboard\StudentDashboard.aspx" />
+    <Content Include="View\Chat\ChatHistory.aspx" />
+    <Content Include="View\Chat\LiveChat.aspx" />
+    <Content Include="View\Feedback\MyProgress.aspx" />
+    <Content Include="View\Feedback\SubmitFeedback.aspx" />
+    <Content Include="View\QnA\AskQuestion.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
@@ -228,6 +239,82 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Course\CreateCourse.aspx.cs">
+      <DependentUpon>CreateCourse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Course\CreateCourse.aspx.designer.cs">
+      <DependentUpon>CreateCourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dashboard\AdminDashboard.aspx.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dashboard\AdminDashboard.aspx.designer.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dashboard\InstructorDashboard.aspx.cs">
+      <DependentUpon>InstructorDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Dashboard\InstructorDashboard.aspx.designer.cs">
+      <DependentUpon>InstructorDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dashboard\StudentDashboard.aspx.cs">
+      <DependentUpon>StudentDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Dashboard\StudentDashboard.aspx.designer.cs">
+      <DependentUpon>StudentDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Chat\ChatHistory.aspx.cs">
+      <DependentUpon>ChatHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Chat\ChatHistory.aspx.designer.cs">
+      <DependentUpon>ChatHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Chat\LiveChat.aspx.cs">
+      <DependentUpon>LiveChat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Chat\LiveChat.aspx.designer.cs">
+      <DependentUpon>LiveChat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Feedback\MyProgress.aspx.cs">
+      <DependentUpon>MyProgress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Feedback\MyProgress.aspx.designer.cs">
+      <DependentUpon>MyProgress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Feedback\SubmitFeedback.aspx.cs">
+      <DependentUpon>SubmitFeedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Feedback\SubmitFeedback.aspx.designer.cs">
+      <DependentUpon>SubmitFeedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\QnA\AskQuestion.aspx.cs">
+      <DependentUpon>AskQuestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\QnA\AskQuestion.aspx.designer.cs">
+      <DependentUpon>AskQuestion.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
