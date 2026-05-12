@@ -1,0 +1,144 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StudentDashboard.aspx.cs" Inherits="ElearningApplication.View.Dashboard.StudentDashboard" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Student Dashboard</title>
+    <style>
+        .starRating { font-size: 0; }
+        .ratingStar {
+            width: 20px;
+            height: 20px;
+            background-repeat: no-repeat;
+            display: block;
+            cursor: pointer;
+        }
+        /* Using data URIs for stars to avoid external dependencies */
+        .filledStar { background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjZmZjMTA3IiBkPSJNMTIgMS43MmwyLjc4IDUuNjNsNi4yMS45LTEuNSA0LjM4IDEuMDYgNi4xN0wxMiAxNS40MWwtNS41NSAyLjk0IDEuMDYtNi4xNy00LjUtNC4zOCA2LjIxLS45TDEyIDEuNzJ6Ii8+PC9zdmc+'); }
+        .emptyStar { background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjZTBlMGUwIiBkPSJNMTIgMS43MmwyLjc4IDUuNjNsNi4yMS45LTEuNSA0LjM4IDEuMDYgNi4xN0wxMiAxNS40MWwtNS41NSAyLjk0IDEuMDYtNi4xNy00LjUtNC4zOCA2LjIxLS45TDEyIDEuNzJ6Ii8+PC9zdmc+'); }
+        .waitingStar { background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjZmY5ODAwIiBkPSJNMTIgMS43MmwyLjc4IDUuNjNsNi4yMS45LTEuNSA0LjM4IDEuMDYgNi4xN0wxMiAxNS40MWwtNS41NSAyLjk0IDEuMDYtNi4xNy00LjUtNC4zOCA2LjIxLS45TDEyIDEuNzJ6Ii8+PC9zdmc+'); }
+    </style>
+</head>
+<body style="height: 216px">
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <div style="margin-left: 2px; padding: 10px; background-color: #f8f9fa; border-bottom: 1px solid #dee2e6; display: flex; align-items: center;">
+            <asp:LinkButton ID="btnHome" runat="server" OnClick="btnHome_Click" style="text-decoration:none; font-size: 20px; margin-right: 15px;">☰</asp:LinkButton>
+            <asp:Label ID="Label1" runat="server" Text="STUDENT DASHBOARD" style="font-weight: bold; font-size: 18px; flex-grow: 1;"></asp:Label>
+            <asp:Label ID="notificatioicon" runat="server" Text="🔔" style="font-size: 20px; margin-right: 20px; cursor: pointer;"></asp:Label>
+            <asp:PlaceHolder ID="userprofileplaceholder" runat="server"></asp:PlaceHolder>
+            <asp:LinkButton ID="btnLogout" runat="server" OnClick="btnLogout_Click" style="margin-left: 15px; color: red; text-decoration: none; font-size: 14px;">Logout</asp:LinkButton>
+        </div>
+        <asp:Panel ID="Panel1" runat="server" Height="479px" style="margin-top: 19px">
+            <ajaxToolkit:Rating ID="Rating1" runat="server"
+                StarCssClass="ratingStar"
+                WaitingStarCssClass="waitingStar"
+                FilledStarCssClass="filledStar"
+                EmptyStarCssClass="emptyStar">
+            </ajaxToolkit:Rating>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+            <br />
+            <ajaxToolkit:Rating ID="Rating2" runat="server" ReadOnly="True"
+                StarCssClass="ratingStar"
+                WaitingStarCssClass="waitingStar"
+                FilledStarCssClass="filledStar"
+                EmptyStarCssClass="emptyStar">
+            </ajaxToolkit:Rating>
+            <asp:Panel ID="Panel2" runat="server" Height="108px" style="margin-left: 26px" Width="814px" BackColor="Aqua">
+                <asp:Label ID="Label2" runat="server" Text="📚 ENROLLED"></asp:Label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="Label3" runat="server" Text="✅ COMPLETED"></asp:Label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="Label4" runat="server" Text="⭐ AVG RATING"></asp:Label>
+                <br />
+                <asp:PlaceHolder ID="noofenrolledplaceholder" runat="server"></asp:PlaceHolder>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:PlaceHolder ID="numberofcompleted" runat="server"></asp:PlaceHolder>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:PlaceHolder ID="averagerating" runat="server"></asp:PlaceHolder>
+            </asp:Panel>
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="Label7" runat="server" Text="QUICK ACTIONS" style="font-weight: 700"></asp:Label>
+            <br />
+            <asp:Panel ID="QuickActionsPanel" runat="server" Height="50px" style="margin-left: 26px" Width="814px" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px">
+                &nbsp;&nbsp;&nbsp;
+                <asp:Button ID="btnLiveChat" runat="server" Text="💬 LIVE CHAT" OnClick="btnLiveChat_Click" />
+                &nbsp;&nbsp;&nbsp;
+                <asp:Button ID="btnAskQuestion" runat="server" Text="❓ ASK QUESTION" OnClick="btnAskQuestion_Click" />
+                &nbsp;&nbsp;&nbsp;
+                <asp:Button ID="btnFeedback" runat="server" Text="📝 FEEDBACK" OnClick="btnFeedback_Click" />
+                &nbsp;&nbsp;&nbsp;
+                <asp:Button ID="btnProgress" runat="server" Text="📈 MY PROGRESS" OnClick="btnProgress_Click" />
+            </asp:Panel>
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="Label8" runat="server" Text="RECENT NOTIFICATIONS" style="font-weight: 700"></asp:Label>
+            <br />
+            <asp:ListBox ID="lstNotifications" runat="server" Height="70px" style="margin-left: 26px" Width="814px"></asp:ListBox>
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="Label5" runat="server" style="font-weight: 700" Text="MY COURSES"></asp:Label>
+            <br />
+            <asp:Localize ID="Localize1" runat="server"></asp:Localize>
+            <asp:Panel ID="Panel3" runat="server" Height="191px" style="margin-left: 32px" Width="837px">
+                <asp:Panel ID="Panel4" runat="server" BackColor="#66FFFF" Height="117px" style="margin-left: 100px" Width="667px">
+                    <asp:PlaceHolder ID="mycoursename" runat="server"></asp:PlaceHolder>
+                    <br />
+                    <ajaxToolkit:LineChart ID="LineChart1" runat="server">
+                    </ajaxToolkit:LineChart>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Label ID="progrelabel" runat="server" Text="   Progress "></asp:Label>
+                    &nbsp;
+                    <asp:Chart ID="Chart1" runat="server" Height="22px" style="margin-left: 122px" Width="28px">
+                        <Series>
+                            <asp:Series ChartType="Doughnut" Name="Series1">
+                            </asp:Series>
+                        </Series>
+                        <ChartAreas>
+                            <asp:ChartArea Name="ChartArea1">
+                            </asp:ChartArea>
+                        </ChartAreas>
+                    </asp:Chart>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="Button2" runat="server" Text="CONTINUE" OnClick="Button2_Click" />
+                    <br />
+                    &nbsp;&nbsp;&nbsp;
+                    <asp:Label ID="Label6" runat="server" Text="Instructor"></asp:Label>
+                    &nbsp;&nbsp;
+                    <asp:PlaceHolder ID="instructorname" runat="server"></asp:PlaceHolder>
+                </asp:Panel>
+                <br />
+            </asp:Panel>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <ajaxToolkit:BarChart ID="BarChart1" runat="server">
+            </ajaxToolkit:BarChart>
+        </asp:Panel>
+    </form>
+</body>
+</html>
