@@ -184,6 +184,7 @@
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="View\Account\Login.aspx" />
     <Content Include="View\Account\Register.aspx" />
+    <Content Include="View\Course\CreateCourse.aspx" />
     <Content Include="View\Dashboard\AdminDashboard.aspx" />
     <Content Include="View\Dashboard\InstructorDashboard.aspx" />
     <Content Include="View\Dashboard\StudentDashboard.aspx" />
@@ -258,6 +259,13 @@
     </Compile>
     <Compile Include="View\Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Course\CreateCourse.aspx.cs">
+      <DependentUpon>CreateCourse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Course\CreateCourse.aspx.designer.cs">
+      <DependentUpon>CreateCourse.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\Dashboard\AdminDashboard.aspx.cs">
       <DependentUpon>AdminDashboard.aspx</DependentUpon>

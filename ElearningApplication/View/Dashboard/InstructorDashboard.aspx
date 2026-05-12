@@ -41,7 +41,7 @@
             <asp:Panel ID="ActionsPanel" runat="server" Height="100px" Width="814px" BackColor="#E3F2FD" BorderStyle="Solid" BorderWidth="1px" BorderColor="#BBDEFB">
                 <br />
                 &nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnCreateCourse" runat="server" Text="➕ CREATE COURSE" Width="180px" Height="40px" />
+                <asp:Button ID="btnCreateCourse" runat="server" Text="➕ CREATE COURSE" Width="180px" Height="40px" OnClick="btnCreateCourse_Click" />
                 &nbsp;&nbsp;&nbsp;
                 <asp:Button ID="btnGradeAssignments" runat="server" Text="📝 GRADE ASSIGNMENTS" Width="180px" Height="40px" />
                 &nbsp;&nbsp;&nbsp;

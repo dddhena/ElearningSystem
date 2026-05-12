@@ -95,5 +95,10 @@ namespace ElearningApplication.View.Dashboard
             Session.Abandon();
             Response.Redirect("~/View/Account/Login.aspx");
         }
+
+        protected void btnCreateCourse_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/View/Course/CreateCourse.aspx");
+        }
     }
-}
+}
