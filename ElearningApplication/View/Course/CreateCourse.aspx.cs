@@ -28,8 +28,8 @@ namespace ElearningApplication.View.Course
                 string category = ddlCategory.SelectedValue;
                 string level = ddlLevel.SelectedValue;
                 decimal price = 0;
-                decimal.TryParse(txtPrice.Text, out price);
                 int instructorId = Convert.ToInt32(Session["UserId"]);
+
 
                 string connString = ConfigurationManager.ConnectionStrings["ElearningDb"].ConnectionString;
 
@@ -82,7 +82,7 @@ namespace ElearningApplication.View.Course
         {
             txtTitle.Text = "";
             txtDescription.Text = "";
-            txtPrice.Text = "";
+
             ddlCategory.SelectedIndex = 0;
             ddlLevel.SelectedIndex = 0;
         }

@@ -85,9 +85,10 @@ namespace ElearningApplication.View.Dashboard
                     lstNotifications.Items.Add("Your assignment 'Database Design' is due in 2 days.");
                     lstNotifications.Items.Add("New announcement from Prof. Smith: 'Midterm schedule updated'.");
 
-                    // 4. Current Active Course
+                    // 4. All Enrolled Courses
                     string coursesQuery = @"
-                        SELECT TOP 1 C.Title, U.FirstName + ' ' + U.LastName as Instructor, ISNULL(P.CompletionPercentage, 0) as Progress
+                        SELECT C.CourseId, C.Title, C.Category, U.FirstName + ' ' + U.LastName as Instructor, 
+                               ISNULL(P.CompletionPercentage, 0) as Progress
                         FROM Enrollments E
                         JOIN Courses C ON E.CourseId = C.CourseId
                         JOIN Users U ON C.InstructorId = U.UserId
@@ -100,18 +101,8 @@ namespace ElearningApplication.View.Dashboard
                         cmd.Parameters.AddWithValue("@UserId", userId);
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-                            if (reader.Read())
-                            {
-                                mycoursename.Controls.Add(new Literal { Text = $"<h4 style='margin:5px 0; color:#333;'>{reader["Title"]}</h4>" });
-                                instructorname.Controls.Add(new Literal { Text = $"<span style='color:#555;'>{reader["Instructor"]}</span>" });
-                                progrelabel.Text = $"   Progress: {reader["Progress"]}%";
-                            }
-                            else
-                            {
-                                mycoursename.Controls.Add(new Literal { Text = "<span style='color:#666;'>No courses enrolled yet.</span>" });
-                                instructorname.Controls.Add(new Literal { Text = "-" });
-                                Button2.Visible = false;
-                            }
+                            rptEnrolledCourses.DataSource = reader;
+                            rptEnrolledCourses.DataBind();
                         }
                     }
                 }
@@ -121,6 +112,22 @@ namespace ElearningApplication.View.Dashboard
                     Label1.Text = "Error loading dashboard: " + ex.Message;
                 }
             }
+        }
+
+        public void btnEnrollMore_Click(object sender, EventArgs e)
+
+        {
+            Response.Redirect("~/View/Enrollment/Enrollment.aspx");
+        }
+
+        public void btnContinue_Click(object sender, EventArgs e)
+
+        {
+            LinkButton btn = (LinkButton)sender;
+            string courseId = btn.CommandArgument;
+            // Redirect to course content/lessons page
+            // For now, redirecting to chat as a placeholder or dashboard itself
+            Response.Redirect("~/View/Chat/LiveChat.aspx?courseId=" + courseId);
         }
 
         protected void btnLiveChat_Click(object sender, EventArgs e)
@@ -157,9 +164,14 @@ namespace ElearningApplication.View.Dashboard
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            // Logic for "CONTINUE" button - e.g., redirect to the last lesson
-            // For now, redirect to a generic courses page or live chat
-            Response.Redirect("~/View/Chat/LiveChat.aspx");
+            // This is a legacy button from previous version, can be removed or redirected
+            Response.Redirect("~/View/Enrollment/Enrollment.aspx");
+        }
+
+        public string GetProgressStyle(object progress)
+        {
+            return $"height: 100%; width: {progress}%; background: #6366f1; transition: width 0.5s ease-out;";
         }
     }
 }
+
