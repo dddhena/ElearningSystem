@@ -8,7 +8,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{955B1557-2607-4B67-8A5B-989D10583964}</ProjectGuid>
+    <ProjectGuid>{CA9419C8-6147-753E-AB81-7B297C85B36E}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -184,13 +184,13 @@
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="View\Account\Login.aspx" />
     <Content Include="View\Account\Register.aspx" />
+    <Content Include="View\Admin\ManageUsers.aspx" />
     <Content Include="View\Dashboard\AdminDashboard.aspx" />
     <Content Include="View\Dashboard\InstructorDashboard.aspx" />
     <Content Include="View\Dashboard\StudentDashboard.aspx" />
     <Content Include="View\Chat\ChatHistory.aspx" />
     <Content Include="View\Chat\LiveChat.aspx" />
     <Content Include="View\Course\CreateCourse.aspx" />
-
     <Content Include="View\Enrollment\Enrollment.aspx" />
     <Content Include="View\Feedback\MyProgress.aspx" />
     <Content Include="View\Feedback\SubmitFeedback.aspx" />
@@ -262,6 +262,13 @@
     <Compile Include="View\Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="View\Admin\ManageUsers.aspx.cs">
+      <DependentUpon>ManageUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Admin\ManageUsers.aspx.designer.cs">
+      <DependentUpon>ManageUsers.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View\Dashboard\AdminDashboard.aspx.cs">
       <DependentUpon>AdminDashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -304,7 +311,6 @@
     <Compile Include="View\Course\CreateCourse.aspx.designer.cs">
       <DependentUpon>CreateCourse.aspx</DependentUpon>
     </Compile>
-
     <Compile Include="View\Enrollment\Enrollment.aspx.cs">
       <DependentUpon>Enrollment.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
