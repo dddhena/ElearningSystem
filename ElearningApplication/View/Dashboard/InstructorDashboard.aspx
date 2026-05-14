@@ -8,6 +8,9 @@
 <body>
     <form id="form1" runat="server">
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <div id="divDashboardMessage" runat="server" visible="false" style="margin: 20px; padding: 15px; background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; border-radius: 5px;">
+            <asp:Literal ID="litDashboardMessage" runat="server"></asp:Literal>
+        </div>
         <div style="margin-left: 2px; padding: 10px; background-color: #007bff; color: white; display: flex; align-items: center;">
             <asp:LinkButton ID="btnHome" runat="server" OnClick="btnHome_Click" style="color: white; text-decoration: none; font-size: 20px; margin-right: 15px;">☰</asp:LinkButton>
             <asp:Label ID="Label1" runat="server" Text="INSTRUCTOR DASHBOARD" style="font-weight: bold; font-size: 18px; flex-grow: 1;"></asp:Label>
@@ -51,7 +54,20 @@
             <br /><br />
             <asp:Label ID="LabelMyCourses" runat="server" Text="MY COURSES" style="font-weight: 700"></asp:Label>
             <br />
-            <asp:GridView ID="gvMyCourses" runat="server" Width="814px" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3">
+            <asp:GridView ID="gvMyCourses" runat="server" Width="814px" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" AutoGenerateColumns="False">
+                <Columns>
+                    <asp:BoundField DataField="CourseId" HeaderText="ID" />
+                    <asp:BoundField DataField="Title" HeaderText="Course Title" />
+                    <asp:BoundField DataField="Category" HeaderText="Category" />
+                    <asp:BoundField DataField="CreatedAt" HeaderText="Created At" DataFormatString="{0:d}" />
+                    <asp:TemplateField HeaderText="Actions">
+                        <ItemTemplate>
+                            <asp:HyperLink ID="lnkEdit" runat="server" 
+                                NavigateUrl='<%# "~/View/Course/EditCourse.aspx?id=" + Eval("CourseId") %>' 
+                                Text="✎ Edit" ForeColor="#007bff" style="text-decoration:none; font-weight:bold;"></asp:HyperLink>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                </Columns>
                 <FooterStyle BackColor="White" ForeColor="#000066" />
                 <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
                 <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
