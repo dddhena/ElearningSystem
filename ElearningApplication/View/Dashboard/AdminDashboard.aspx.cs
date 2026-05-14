@@ -87,5 +87,10 @@ namespace ElearningApplication.View.Dashboard
             Session.Abandon();
             Response.Redirect("~/View/Account/Login.aspx");
         }
+
+        protected void btnManageUsers_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/View/Admin/ManageUsers.aspx");
+        }
     }
 }

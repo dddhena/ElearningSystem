@@ -41,7 +41,7 @@
             <asp:Panel ID="ManagementPanel" runat="server" Height="150px" Width="814px" BackColor="#D1ECF1" BorderStyle="Solid" BorderWidth="1px" BorderColor="#BEE5EB">
                 <br />
                 &nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnManageUsers" runat="server" Text="👤 USERS" Width="150px" Height="40px" />
+                <asp:Button ID="btnManageUsers" runat="server" Text="👤 USERS" Width="150px" Height="40px" OnClick="btnManageUsers_Click" />
                 &nbsp;&nbsp;&nbsp;
                 <asp:Button ID="btnManageCourses" runat="server" Text="📖 COURSES" Width="150px" Height="40px" />
                 &nbsp;&nbsp;&nbsp;
