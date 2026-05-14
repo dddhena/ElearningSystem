@@ -18,6 +18,12 @@ namespace ElearningApplication.View.Dashboard
 
             if (!IsPostBack)
             {
+                if (Session["UpdateMessage"] != null)
+                {
+                    divDashboardMessage.Visible = true;
+                    litDashboardMessage.Text = Session["UpdateMessage"].ToString();
+                    Session.Remove("UpdateMessage");
+                }
                 LoadInstructorData();
             }
         }
