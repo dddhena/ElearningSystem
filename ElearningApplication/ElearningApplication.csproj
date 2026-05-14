@@ -184,12 +184,15 @@
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="View\Account\Login.aspx" />
     <Content Include="View\Account\Register.aspx" />
+    <Content Include="View\Course\EditCourse.aspx" />
+
     <Content Include="View\Dashboard\AdminDashboard.aspx" />
     <Content Include="View\Dashboard\InstructorDashboard.aspx" />
     <Content Include="View\Dashboard\StudentDashboard.aspx" />
     <Content Include="View\Chat\ChatHistory.aspx" />
     <Content Include="View\Chat\LiveChat.aspx" />
     <Content Include="View\Course\CreateCourse.aspx" />
+
 
     <Content Include="View\Enrollment\Enrollment.aspx" />
     <Content Include="View\Feedback\MyProgress.aspx" />
@@ -262,6 +265,13 @@
     <Compile Include="View\Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="View\Course\EditCourse.aspx.cs">
+      <DependentUpon>EditCourse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Course\EditCourse.aspx.designer.cs">
+      <DependentUpon>EditCourse.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View\Dashboard\AdminDashboard.aspx.cs">
       <DependentUpon>AdminDashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -304,7 +314,6 @@
     <Compile Include="View\Course\CreateCourse.aspx.designer.cs">
       <DependentUpon>CreateCourse.aspx</DependentUpon>
     </Compile>
-
     <Compile Include="View\Enrollment\Enrollment.aspx.cs">
       <DependentUpon>Enrollment.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -336,6 +345,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="View\Course\NewFolder1\" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
