@@ -185,12 +185,15 @@
     <Content Include="View\Account\Login.aspx" />
     <Content Include="View\Account\Register.aspx" />
     <Content Include="View\Course\EditCourse.aspx" />
+
     <Content Include="View\Dashboard\AdminDashboard.aspx" />
     <Content Include="View\Dashboard\InstructorDashboard.aspx" />
     <Content Include="View\Dashboard\StudentDashboard.aspx" />
     <Content Include="View\Chat\ChatHistory.aspx" />
     <Content Include="View\Chat\LiveChat.aspx" />
     <Content Include="View\Course\CreateCourse.aspx" />
+
+
     <Content Include="View\Enrollment\Enrollment.aspx" />
     <Content Include="View\Feedback\MyProgress.aspx" />
     <Content Include="View\Feedback\SubmitFeedback.aspx" />
@@ -271,6 +274,7 @@
     </Compile>
     <Compile Include="View\Dashboard\AdminDashboard.aspx.cs">
       <DependentUpon>AdminDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="View\Dashboard\AdminDashboard.aspx.designer.cs">
       <DependentUpon>AdminDashboard.aspx</DependentUpon>
