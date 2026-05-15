@@ -4,6 +4,8 @@ namespace ElearningApplication.View.Dashboard
     {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         protected global::System.Web.UI.ScriptManager ScriptManager1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divDashboardMessage;
+        protected global::System.Web.UI.WebControls.Literal litDashboardMessage;
         protected global::System.Web.UI.WebControls.LinkButton btnHome;
         protected global::System.Web.UI.WebControls.Label Label1;
         protected global::System.Web.UI.WebControls.PlaceHolder userprofileplaceholder;
