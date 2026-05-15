@@ -121,13 +121,11 @@ namespace ElearningApplication.View.Dashboard
         }
 
         public void btnContinue_Click(object sender, EventArgs e)
-
         {
             LinkButton btn = (LinkButton)sender;
             string courseId = btn.CommandArgument;
-            // Redirect to course content/lessons page
-            // For now, redirecting to chat as a placeholder or dashboard itself
-            Response.Redirect("~/View/Chat/LiveChat.aspx?courseId=" + courseId);
+            // Redirect to the new enrollment details page
+            Response.Redirect("~/View/Enrollment/EnrollmentDetails.aspx?courseId=" + courseId);
         }
 
         protected void btnLiveChat_Click(object sender, EventArgs e)

@@ -11,54 +11,65 @@ namespace ElearningApplication.View.Account
         {
         }
 
-        protected void Loginpage_Authenticate(object sender, AuthenticateEventArgs e)
+        protected void btnLogin_Click(object sender, EventArgs e)
         {
-            string email = Loginpage.UserName;
-            string password = Loginpage.Password;
+            string email = txtEmail.Text.Trim();
+            string password = txtPassword.Text.Trim();
+
+            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
+            {
+                lblMessage.Text = "Please enter both email and password.";
+                return;
+            }
 
             string connString = ConfigurationManager.ConnectionStrings["ElearningDb"].ConnectionString;
             using (SqlConnection conn = new SqlConnection(connString))
             {
-                // NOTE: Password should be hashed in production!
                 string query = "SELECT UserId, Role FROM Users WHERE Email = @Email AND PasswordHash = @Password AND IsActive = 1";
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@Email", email);
                     cmd.Parameters.AddWithValue("@Password", password);
 
-                    conn.Open();
-                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    try
                     {
-                        if (reader.Read())
+                        conn.Open();
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-                            e.Authenticated = true;
-                            Session["UserId"] = reader["UserId"];
-                            Session["UserRole"] = reader["Role"];
-                            Session["UserEmail"] = email;
-                            
-                            // Redirect based on role
-                            string role = Session["UserRole"]?.ToString();
-                            if (role == "Student")
+                            if (reader.Read())
                             {
-                                Response.Redirect("~/View/Dashboard/StudentDashboard.aspx");
-                            }
-                            else if (role == "Admin")
-                            {
-                                Response.Redirect("~/View/Dashboard/AdminDashboard.aspx");
-                            }
-                            else if (role == "Instructor")
-                            {
-                                Response.Redirect("~/View/Dashboard/InstructorDashboard.aspx");
+                                Session["UserId"] = reader["UserId"];
+                                Session["UserRole"] = reader["Role"];
+                                Session["UserEmail"] = email;
+
+                                // Redirect based on role
+                                string role = Session["UserRole"]?.ToString();
+                                if (role == "Student")
+                                {
+                                    Response.Redirect("~/View/Dashboard/StudentDashboard.aspx");
+                                }
+                                else if (role == "Admin")
+                                {
+                                    Response.Redirect("~/View/Dashboard/AdminDashboard.aspx");
+                                }
+                                else if (role == "Instructor")
+                                {
+                                    Response.Redirect("~/View/Dashboard/InstructorDashboard.aspx");
+                                }
+                                else
+                                {
+                                    Response.Redirect("~/Default.aspx");
+                                }
                             }
                             else
                             {
-                                Response.Redirect("~/Default.aspx");
+                                lblMessage.Text = "Invalid email or password.";
                             }
                         }
-                        else
-                        {
-                            e.Authenticated = false;
-                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        lblMessage.Text = "Error: " + ex.Message;
                     }
                 }
             }
