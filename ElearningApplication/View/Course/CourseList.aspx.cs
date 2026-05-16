@@ -40,7 +40,11 @@ namespace ElearningApplication.View.Course
             {
                 using (SqlConnection conn = new SqlConnection(connString))
                 {
-                    string query = "SELECT CourseId, Title, Description, Category, Level, Price FROM Courses WHERE 1=1";
+                    string query = @"SELECT c.CourseId, c.Title, c.Description, c.Category, c.Level, c.Price, 
+                                     u.FirstName + ' ' + u.LastName as InstructorName 
+                                     FROM Courses c 
+                                     JOIN Users u ON c.InstructorId = u.UserId 
+                                     WHERE 1=1";
                     
                     if (!string.IsNullOrEmpty(searchTerm))
                     {
