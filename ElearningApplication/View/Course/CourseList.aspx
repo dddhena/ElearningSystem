@@ -2,9 +2,11 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
     <title>Available Courses - Elearning System</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap"
+        rel="stylesheet" />
     <style>
         :root {
             --primary: #6366f1;
@@ -57,13 +59,13 @@
             padding: 20px;
             border-radius: 20px;
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .search-input {
             padding: 12px 20px;
             border-radius: 12px;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             background: rgba(15, 23, 42, 0.5);
             color: white;
             width: 300px;
@@ -79,7 +81,7 @@
         .filter-select {
             padding: 12px 20px;
             border-radius: 12px;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             background: rgba(15, 23, 42, 0.5);
             color: white;
             outline: none;
@@ -112,7 +114,7 @@
             background: var(--card-bg);
             border-radius: 24px;
             overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             display: flex;
@@ -121,8 +123,8 @@
 
         .course-card:hover {
             transform: translateY(-10px);
-            border-color: rgba(255,255,255,0.2);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
         }
 
         .card-image {
@@ -137,14 +139,14 @@
 
         .card-image i {
             font-size: 4rem;
-            color: rgba(255,255,255,0.2);
+            color: rgba(255, 255, 255, 0.2);
         }
 
         .category-badge {
             position: absolute;
             top: 20px;
             left: 20px;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(5px);
             padding: 5px 15px;
             border-radius: 100px;
@@ -152,7 +154,7 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .card-content {
@@ -186,7 +188,7 @@
             align-items: center;
             margin-top: auto;
             padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.05);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .price {
@@ -198,7 +200,7 @@
         .level {
             font-size: 0.8rem;
             color: var(--text-muted);
-            background: rgba(255,255,255,0.05);
+            background: rgba(255, 255, 255, 0.05);
             padding: 4px 10px;
             border-radius: 6px;
         }
@@ -208,8 +210,8 @@
             width: 100%;
             text-align: center;
             padding: 12px;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             color: white;
             text-decoration: none;
             border-radius: 12px;
@@ -223,6 +225,47 @@
             border-color: var(--primary);
         }
 
+        .btn-chat {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            text-decoration: none;
+            border-radius: 12px;
+            margin-top: 10px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-chat:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .instructor-info {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        .instructor-icon {
+            width: 24px;
+            height: 24px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: white;
+        }
+
         .no-results {
             text-align: center;
             grid-column: 1 / -1;
@@ -232,6 +275,7 @@
         }
     </style>
 </head>
+
 <body>
     <form id="form1" runat="server">
         <div class="container">
@@ -241,7 +285,8 @@
             </header>
 
             <div class="search-container">
-                <asp:TextBox ID="txtSearch" runat="server" CssClass="search-input" placeholder="Search by title..."></asp:TextBox>
+                <asp:TextBox ID="txtSearch" runat="server" CssClass="search-input" placeholder="Search by title...">
+                </asp:TextBox>
                 <asp:DropDownList ID="ddlCategory" runat="server" CssClass="filter-select">
                     <asp:ListItem Text="All Categories" Value=""></asp:ListItem>
                     <asp:ListItem Text="Programming" Value="Programming"></asp:ListItem>
@@ -249,7 +294,8 @@
                     <asp:ListItem Text="Business" Value="Business"></asp:ListItem>
                     <asp:ListItem Text="Marketing" Value="Marketing"></asp:ListItem>
                 </asp:DropDownList>
-                <asp:Button ID="btnSearch" runat="server" Text="Search" CssClass="btn-search" OnClick="btnSearch_Click" />
+                <asp:Button ID="btnSearch" runat="server" Text="Search" CssClass="btn-search"
+                    OnClick="btnSearch_Click" />
             </div>
 
             <div class="course-grid">
@@ -257,24 +303,41 @@
                     <ItemTemplate>
                         <div class="course-card">
                             <div class="card-image">
-                                <span class="category-badge"><%# Eval("Category") %></span>
+                                <span class="category-badge">
+                                    <%# Eval("Category") %>
+                                </span>
                                 <div style="font-size: 50px; opacity: 0.3;">🎓</div>
                             </div>
                             <div class="card-content">
-                                <h3 class="course-title"><%# Eval("Title") %></h3>
-                                <p class="course-desc"><%# Eval("Description") %></p>
-                                <div class="card-footer">
-                                    <span class="price"><%# string.Format("{0:C}", Eval("Price")) %></span>
-                                    <span class="level"><%# Eval("Level") %></span>
+                                <h3 class="course-title">
+                                    <%# Eval("Title") %>
+                                </h3>
+                                <div class="instructor-info">
+                                    <div class="instructor-icon">👤</div>
+                                    <span>By <%# Eval("InstructorName") %></span>
                                 </div>
-                                <asp:HyperLink ID="lnkView" runat="server" 
-                                    NavigateUrl='<%# "~/View/Enrollment/EnrollmentDetails.aspx?id=" + Eval("CourseId") %>' 
+                                <p class="course-desc">
+                                    <%# Eval("Description") %>
+                                </p>
+                                <div class="card-footer">
+                                    <span class="price">
+                                        <%# string.Format("{0:C}", Eval("Price")) %>
+                                    </span>
+                                    <span class="level">
+                                        <%# Eval("Level") %>
+                                    </span>
+                                </div>
+                                <asp:HyperLink ID="lnkView" runat="server"
+                                    NavigateUrl='<%# "~/View/Enrollment/EnrollmentDetails.aspx?id=" + Eval("CourseId") %>'
                                     CssClass="btn-view" Text="View Details"></asp:HyperLink>
+                                <asp:HyperLink ID="lnkChat" runat="server"
+                                    NavigateUrl='<%# "~/View/Chat/LiveChat.aspx?courseId=" + Eval("CourseId") %>'
+                                    CssClass="btn-chat" Text="💬 Chat with Instructor"></asp:HyperLink>
                             </div>
                         </div>
                     </ItemTemplate>
                 </asp:Repeater>
-                
+
                 <asp:Panel ID="pnlNoResults" runat="server" Visible="false" CssClass="no-results">
                     <h2>No courses found</h2>
                     <p>Try adjusting your search or filters</p>
@@ -283,4 +346,5 @@
         </div>
     </form>
 </body>
+
 </html>
