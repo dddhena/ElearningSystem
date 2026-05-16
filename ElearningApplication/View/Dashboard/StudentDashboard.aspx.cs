@@ -115,9 +115,8 @@ namespace ElearningApplication.View.Dashboard
         }
 
         public void btnEnrollMore_Click(object sender, EventArgs e)
-
         {
-            Response.Redirect("~/View/Enrollment/Enrollment.aspx");
+            Response.Redirect("~/View/Course/CourseList.aspx");
         }
 
         public void btnContinue_Click(object sender, EventArgs e)
