@@ -45,7 +45,6 @@ namespace ElearningApplication.View.Course
                                      FROM Courses c 
                                      JOIN Users u ON c.InstructorId = u.UserId 
                                      WHERE 1=1";
-                    
                     if (!string.IsNullOrEmpty(searchTerm))
                     {
                         query += " AND (Title LIKE @Search OR Description LIKE @Search)";
@@ -53,10 +52,10 @@ namespace ElearningApplication.View.Course
                     
                     if (!string.IsNullOrEmpty(category))
                     {
-                        query += " AND Category = @Category";
+                        query += " AND c.Category = @Category";
                     }
 
-                    query += " ORDER BY CreatedAt DESC";
+                    query += " ORDER BY c.CreatedAt DESC";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
