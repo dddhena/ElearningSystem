@@ -52,10 +52,10 @@ namespace ElearningApplication.View.Course
                     
                     if (!string.IsNullOrEmpty(category))
                     {
-                        query += " AND Category = @Category";
+                        query += " AND c.Category = @Category";
                     }
 
-                    query += " ORDER BY CreatedAt DESC";
+                    query += " ORDER BY c.CreatedAt DESC";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
