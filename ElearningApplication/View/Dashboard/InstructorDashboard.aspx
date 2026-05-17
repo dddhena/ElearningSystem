@@ -73,6 +73,10 @@
                             <asp:HyperLink ID="lnkLessons" runat="server" 
                                 NavigateUrl='<%# "~/View/Instructor/ManageLessons.aspx?courseId=" + Eval("CourseId") %>' 
                                 Text="📖 Lessons" ForeColor="#28a745" style="text-decoration:none; font-weight:bold;"></asp:HyperLink>
+                            &nbsp; | &nbsp;
+                            <asp:HyperLink ID="lnkMaterial" runat="server" 
+                                NavigateUrl='<%# "~/View/Instructor/UploadMaterial.aspx?courseId=" + Eval("CourseId") %>' 
+                                Text="📎 Materials" ForeColor="#e83e8c" style="text-decoration:none; font-weight:bold;"></asp:HyperLink>
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>
