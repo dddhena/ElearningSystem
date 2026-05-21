@@ -133,4 +133,4 @@ namespace ElearningApplication.View.Course
             divMessage.Attributes["class"] = isSuccess ? "message success" : "message error";
         }
     }
-}
+}

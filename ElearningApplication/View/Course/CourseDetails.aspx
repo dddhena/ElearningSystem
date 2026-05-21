@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CourseDetails.aspx.cs" Inherits="ElearningApplication.View.Course.CourseDetails" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CourseDetails.aspx.cs" Inherits="ElearningApplication.View.Course.CourseDetails" %>
 
 <!DOCTYPE html>
 
