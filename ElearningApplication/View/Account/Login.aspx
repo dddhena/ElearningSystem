@@ -14,7 +14,7 @@
                 <br />
                 <div style="text-align: left; margin-left: 50px;">
                     <asp:Label ID="lblEmail" runat="server" Text="Email Address"></asp:Label>
-                    <asp:TextBox ID="txtEmail" runat="server" Width="250px" style="margin-left: 20px;"></asp:TextBox>
+                    <asp:TextBox ID="txtEmail" runat="server" Width="250px" style="margin-left: 20px;" OnTextChanged="txtEmail_TextChanged"></asp:TextBox>
                     <span style="color: red;">*</span>
                     <br /><br />
                     <asp:Label ID="lblPassword" runat="server" Text="Password"></asp:Label>

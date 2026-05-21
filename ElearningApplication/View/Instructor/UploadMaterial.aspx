@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UploadMaterial.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UploadMaterial.aspx.cs"
     Inherits="ElearningApplication.View.Instructor.UploadMaterial" %>
 
     <!DOCTYPE html>

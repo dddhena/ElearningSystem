@@ -24,8 +24,8 @@
             <asp:Label ID="Label2" runat="server" Text="Last Name"></asp:Label>
             &nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtLastName" runat="server" OnTextChanged="TextBox2_TextChanged" style="margin-left: 40px"
-                Width="213px"></asp:TextBox>
+            <asp:TextBox ID="txtLastName" runat="server" OnTextChanged="TextBox2_TextChanged" style="margin-left: 33px"
+                Width="209px"></asp:TextBox>
             <br />
             <asp:Label ID="Label3" runat="server" Text="Email"></asp:Label>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

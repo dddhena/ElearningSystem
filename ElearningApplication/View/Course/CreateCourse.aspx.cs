@@ -87,4 +87,4 @@ namespace ElearningApplication.View.Course
             ddlLevel.SelectedIndex = 0;
         }
     }
-}
+}

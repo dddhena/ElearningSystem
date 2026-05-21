@@ -213,3 +213,88 @@ CREATE TABLE Materials (
     FOREIGN KEY (CourseId) REFERENCES Courses(CourseId),
     FOREIGN KEY (UploadedBy) REFERENCES Users(UserId)
 );
+
+-- Assignments and Submissions
+CREATE TABLE Assignments (
+    AssignmentId INT IDENTITY(1,1) PRIMARY KEY,
+    CourseId INT NOT NULL,
+    Title NVARCHAR(200) NOT NULL,
+    Description NVARCHAR(MAX) NULL,
+    DueDate DATETIME NOT NULL,
+    MaxScore INT DEFAULT 100,
+    CreatedAt DATETIME DEFAULT GETDATE(),
+    FOREIGN KEY (CourseId) REFERENCES Courses(CourseId)
+);
+
+CREATE TABLE AssignmentSubmissions (
+    SubmissionId INT IDENTITY(1,1) PRIMARY KEY,
+    AssignmentId INT NOT NULL,
+    UserId INT NOT NULL,
+    SubmissionDate DATETIME DEFAULT GETDATE(),
+    Status NVARCHAR(50) DEFAULT 'Submitted' CHECK (Status IN ('Submitted', 'Graded', 'Late')),
+    Grade INT NULL,
+    Feedback NVARCHAR(MAX) NULL,
+    FOREIGN KEY (AssignmentId) REFERENCES Assignments(AssignmentId),
+    FOREIGN KEY (UserId) REFERENCES Users(UserId),
+    CONSTRAINT UQ_AssignmentSubmission UNIQUE (AssignmentId, UserId)
+);
+
+CREATE TABLE AssignmentSubmissionFiles (
+    FileId INT IDENTITY(1,1) PRIMARY KEY,
+    SubmissionId INT NOT NULL,
+    FileName NVARCHAR(500) NOT NULL,
+    FilePath NVARCHAR(1000) NOT NULL,
+    UploadedAt DATETIME DEFAULT GETDATE(),
+    FOREIGN KEY (SubmissionId) REFERENCES AssignmentSubmissions(SubmissionId)
+);
+
+-- Assessments (Quizzes) and Questions
+CREATE TABLE Assessments (
+    AssessmentId INT IDENTITY(1,1) PRIMARY KEY,
+    CourseId INT NOT NULL,
+    Title NVARCHAR(200) NOT NULL,
+    Description NVARCHAR(MAX) NULL,
+    DurationMinutes INT DEFAULT 60,
+    TotalMarks INT DEFAULT 100,
+    PassingMarks INT DEFAULT 50,
+    CreatedAt DATETIME DEFAULT GETDATE(),
+    Status NVARCHAR(50) DEFAULT 'Draft' CHECK (Status IN ('Draft', 'Published', 'Closed')),
+    FOREIGN KEY (CourseId) REFERENCES Courses(CourseId)
+);
+
+CREATE TABLE AssessmentQuestions (
+    QuestionId INT IDENTITY(1,1) PRIMARY KEY,
+    AssessmentId INT NOT NULL,
+    QuestionText NVARCHAR(MAX) NOT NULL,
+    QuestionType NVARCHAR(50) NOT NULL CHECK (QuestionType IN ('MultipleChoice', 'TrueFalse', 'ShortAnswer')),
+    OptionA NVARCHAR(500) NULL,
+    OptionB NVARCHAR(500) NULL,
+    OptionC NVARCHAR(500) NULL,
+    OptionD NVARCHAR(500) NULL,
+    CorrectAnswer NVARCHAR(500) NOT NULL, -- Stores 'A', 'B', 'C', 'D' or 'True'/'False' or the short answer text
+    Marks INT DEFAULT 1,
+    FOREIGN KEY (AssessmentId) REFERENCES Assessments(AssessmentId)
+);
+
+CREATE TABLE AssessmentSubmissions (
+    SubmissionId INT IDENTITY(1,1) PRIMARY KEY,
+    AssessmentId INT NOT NULL,
+    UserId INT NOT NULL,
+    StartTime DATETIME DEFAULT GETDATE(),
+    EndTime DATETIME NULL,
+    Score INT DEFAULT 0,
+    Status NVARCHAR(50) DEFAULT 'InProgress' CHECK (Status IN ('InProgress', 'Submitted', 'Graded')),
+    FOREIGN KEY (AssessmentId) REFERENCES Assessments(AssessmentId),
+    FOREIGN KEY (UserId) REFERENCES Users(UserId),
+    CONSTRAINT UQ_AssessmentSubmission UNIQUE (AssessmentId, UserId)
+);
+
+CREATE TABLE StudentAnswers (
+    AnswerId INT IDENTITY(1,1) PRIMARY KEY,
+    SubmissionId INT NOT NULL,
+    QuestionId INT NOT NULL,
+    GivenAnswer NVARCHAR(MAX) NULL, -- Can be 'A', 'B', text, etc.
+    MarksObtained INT DEFAULT 0,
+    FOREIGN KEY (SubmissionId) REFERENCES AssessmentSubmissions(SubmissionId),
+    FOREIGN KEY (QuestionId) REFERENCES AssessmentQuestions(QuestionId)
+);
