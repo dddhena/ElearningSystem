@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SubmitFeedback.aspx.cs" Inherits="ElearningApplication.View.Feedback.SubmitFeedback" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SubmitFeedback.aspx.cs" Inherits="ElearningApplication.View.Feedback.SubmitFeedback" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajax" %>
 <!DOCTYPE html>
 
@@ -35,9 +35,9 @@
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
         
         <div>
-            <asp:Button ID="Button1" runat="server" style="font-weight: 700" Text="← BACK TO COURSE" Width="145px" />
+            <asp:Button ID="Button1" runat="server" style="font-weight: 700" Text="? BACK TO COURSE" Width="145px" />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label1" runat="server" style="font-weight: 700" Text="⭐ COURSE FEEDBACK "></asp:Label>
+            <asp:Label ID="Label1" runat="server" style="font-weight: 700" Text="? COURSE FEEDBACK "></asp:Label>
         </div>
         
         <asp:Panel ID="Panel1" runat="server" Height="529px">
@@ -65,7 +65,7 @@
                 <br />
                 <asp:CheckBox ID="reviewsubmitCheckBox" runat="server" OnCheckedChanged="CheckBox1_CheckedChanged" Text="Submit anonymously" />
                 <br />
-                <asp:Button ID="submitreviewbtn" runat="server" OnClick="submitreviewbtn_Click" Text="Submit Feedback →" BackColor="#003300" ForeColor="White" />
+                <asp:Button ID="submitreviewbtn" runat="server" OnClick="submitreviewbtn_Click" Text="Submit Feedback ?" BackColor="#003300" ForeColor="White" />
             </asp:Panel>
         </asp:Panel>
     </form>
