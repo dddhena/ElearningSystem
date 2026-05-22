@@ -441,4 +441,88 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
+  <ItemGroup>
+    <Content Include="View\Instructor\ManageAssignments.aspx" />
+    <Content Include="View\Instructor\GradeAssignments.aspx" />
+    <Content Include="View\Instructor\ManageAssessments.aspx" />
+    <Content Include="View\Instructor\ManageAssessmentQuestions.aspx" />
+    <Content Include="View\Instructor\AssessmentResults.aspx" />
+    <Content Include="View\Assignment and assessment\AssignmentsList.aspx" />
+    <Content Include="View\Assignment and assessment\SubmitAssignment.aspx" />
+    <Content Include="View\Assignment and assessment\AssessmentsList.aspx" />
+    <Content Include="View\Assignment and assessment\TakeAssessment.aspx" />
+    <Content Include="View\Assignment and assessment\MyResults.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="View\Instructor\ManageAssignments.aspx.cs">
+      <DependentUpon>ManageAssignments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Instructor\GradeAssignments.aspx.cs">
+      <DependentUpon>GradeAssignments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Instructor\ManageAssessments.aspx.cs">
+      <DependentUpon>ManageAssessments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Instructor\ManageAssessmentQuestions.aspx.cs">
+      <DependentUpon>ManageAssessmentQuestions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Instructor\AssessmentResults.aspx.cs">
+      <DependentUpon>AssessmentResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Assignment and assessment\AssignmentsList.aspx.cs">
+      <DependentUpon>AssignmentsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Assignment and assessment\SubmitAssignment.aspx.cs">
+      <DependentUpon>SubmitAssignment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Assignment and assessment\AssessmentsList.aspx.cs">
+      <DependentUpon>AssessmentsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Assignment and assessment\TakeAssessment.aspx.cs">
+      <DependentUpon>TakeAssessment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Assignment and assessment\MyResults.aspx.cs">
+      <DependentUpon>MyResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Instructor\ManageAssignments.aspx.designer.cs">
+      <DependentUpon>ManageAssignments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Instructor\GradeAssignments.aspx.designer.cs">
+      <DependentUpon>GradeAssignments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Instructor\ManageAssessments.aspx.designer.cs">
+      <DependentUpon>ManageAssessments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Instructor\ManageAssessmentQuestions.aspx.designer.cs">
+      <DependentUpon>ManageAssessmentQuestions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Instructor\AssessmentResults.aspx.designer.cs">
+      <DependentUpon>AssessmentResults.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Assignment and assessment\AssignmentsList.aspx.designer.cs">
+      <DependentUpon>AssignmentsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Assignment and assessment\SubmitAssignment.aspx.designer.cs">
+      <DependentUpon>SubmitAssignment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Assignment and assessment\AssessmentsList.aspx.designer.cs">
+      <DependentUpon>AssessmentsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Assignment and assessment\TakeAssessment.aspx.designer.cs">
+      <DependentUpon>TakeAssessment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Assignment and assessment\MyResults.aspx.designer.cs">
+      <DependentUpon>MyResults.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>
