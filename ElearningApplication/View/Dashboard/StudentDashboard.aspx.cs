@@ -144,7 +144,7 @@ namespace ElearningApplication.View.Dashboard
 
         protected void btnProgress_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/View/Feedback/MyProgress.aspx");
+            Response.Redirect("~/View/ProgressTracking/StudentProgress.aspx");
         }
 
         protected void btnHome_Click(object sender, EventArgs e)
