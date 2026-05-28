@@ -142,7 +142,7 @@ namespace ElearningApplication.View.Enrollment
 
         protected void btnMyProgress_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/View/Feedback/MyProgress.aspx");
+            Response.Redirect("~/View/ProgressTracking/StudentProgress.aspx");
         }
     }
 }
