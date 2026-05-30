@@ -328,7 +328,7 @@
                                     </span>
                                 </div>
                                 <asp:HyperLink ID="lnkView" runat="server"
-                                    NavigateUrl='<%# "~/View/Enrollment/EnrollmentDetails.aspx?id=" + Eval("CourseId") %>'
+                                    NavigateUrl='<%# "~/View/Enrollment/EnrollmentDetails.aspx?courseId=" + Eval("CourseId") %>'
                                     CssClass="btn-view" Text="View Details"></asp:HyperLink>
                                 <asp:HyperLink ID="lnkChat" runat="server"
                                     NavigateUrl='<%# "~/View/Chat/LiveChat.aspx?courseId=" + Eval("CourseId") %>'
