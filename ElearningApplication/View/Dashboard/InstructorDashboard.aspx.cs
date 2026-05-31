@@ -106,5 +106,15 @@ namespace ElearningApplication.View.Dashboard
         {
             Response.Redirect("~/View/Course/CreateCourse.aspx");
         }
+
+        protected void btnGradeAssignments_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/View/Instructor/ManageAssignments.aspx");
+        }
+
+        protected void btnAnnounce_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/View/QnA/AskQuestion.aspx");
+        }
     }
 }
