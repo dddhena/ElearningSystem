@@ -32,9 +32,9 @@
                 <br />
                 &nbsp;&nbsp;&nbsp;
                 <asp:Label ID="txtStudentCount" runat="server" Text="0" style="font-size: 24px; font-weight: bold;"></asp:Label>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Label ID="txtMyCoursesCount" runat="server" Text="0" style="font-size: 24px; font-weight: bold;"></asp:Label>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
                 <asp:Label ID="txtRating" runat="server" Text="0.0" style="font-size: 24px; font-weight: bold;"></asp:Label>
             </asp:Panel>
 
@@ -46,9 +46,9 @@
                 &nbsp;&nbsp;&nbsp;
                 <asp:Button ID="btnCreateCourse" runat="server" Text="➕ CREATE COURSE" Width="180px" Height="40px" OnClick="btnCreateCourse_Click" />
                 &nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnGradeAssignments" runat="server" Text="📝 GRADE ASSIGNMENTS" Width="180px" Height="40px" />
+                <asp:Button ID="btnGradeAssignments" runat="server" Text="📝 GRADE ASSIGNMENTS" Width="180px" Height="40px" OnClick="btnGradeAssignments_Click" />
                 &nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnAnnounce" runat="server" Text="📢 POST ANNOUNCEMENT" Width="180px" Height="40px" />
+                <asp:Button ID="btnAnnounce" runat="server" Text="📢 POST ANNOUNCEMENT" Width="180px" Height="40px" OnClick="btnAnnounce_Click" />
             </asp:Panel>
 
             <br /><br />
