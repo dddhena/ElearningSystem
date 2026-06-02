@@ -20,7 +20,7 @@
         .waitingStar { background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjZmY5ODAwIiBkPSJNMTIgMS43MmwyLjc4IDUuNjNsNi4yMS45LTEuNSA0LjM4IDEuMDYgNi4xN0wxMiAxNS40MWwtNS41NSAyLjk0IDEuMDYtNi4xNy00LjUtNC4zOCA2LjIxLS45TDEyIDEuNzJ6Ii8+PC9zdmc+'); }
     </style>
 </head>
-<body style="height: 216px">
+<body style="height: 264px">
     <form id="form1" runat="server">
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
         <div style="margin-left: 2px; padding: 10px; background-color: #f8f9fa; border-bottom: 1px solid #dee2e6; display: flex; align-items: center;">
@@ -46,7 +46,7 @@
                 FilledStarCssClass="filledStar"
                 EmptyStarCssClass="emptyStar">
             </ajaxToolkit:Rating>
-            <asp:Panel ID="Panel2" runat="server" Height="108px" style="margin-left: 26px" Width="814px" BackColor="Aqua">
+            <asp:Panel ID="Panel2" runat="server" Height="108px" style="margin-left: 26px" Width="1578px" BackColor="Aqua">
                 <asp:Label ID="Label2" runat="server" Text="ENROLLED"></asp:Label>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Label ID="Label3" runat="server" Text=" COMPLETED"></asp:Label>
@@ -54,9 +54,9 @@
                 <asp:Label ID="Label4" runat="server" Text=" AVG RATING"></asp:Label>
                 <br />
                 <asp:PlaceHolder ID="noofenrolledplaceholder" runat="server"></asp:PlaceHolder>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:PlaceHolder ID="numberofcompleted" runat="server"></asp:PlaceHolder>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:PlaceHolder ID="averagerating" runat="server"></asp:PlaceHolder>
             </asp:Panel>
             <br />
@@ -78,7 +78,7 @@
             <asp:Label ID="Label8" runat="server" Text="RECENT NOTIFICATIONS" style="font-weight: 700"></asp:Label>
             <br />
             <asp:ListBox ID="lstNotifications" runat="server" Height="70px" style="margin-left: 26px" Width="814px"></asp:ListBox>
-            <br />
+            -<br />
             <div style="padding: 20px 30px;">
                 <h3 style="margin-bottom: 20px; font-weight: 700; color: #333; display: flex; align-items: center; gap: 10px;">
                     &#128218; MY ENROLLED COURSES
