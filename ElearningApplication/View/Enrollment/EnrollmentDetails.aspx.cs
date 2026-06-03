@@ -144,5 +144,11 @@ namespace ElearningApplication.View.Enrollment
         {
             Response.Redirect("~/View/ProgressTracking/StudentProgress.aspx");
         }
+
+        protected void btnMaterials_Click(object sender, EventArgs e)
+        {
+            string courseId = Request.QueryString["courseId"];
+            Response.Redirect("~/View/Enrollment/CourseMaterials.aspx?courseId=" + courseId);
+        }
     }
 }
