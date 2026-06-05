@@ -49,6 +49,8 @@
                 <asp:Button ID="btnGradeAssignments" runat="server" Text="📝 GRADE ASSIGNMENTS" Width="180px" Height="40px" />
                 &nbsp;&nbsp;&nbsp;
                 <asp:Button ID="btnAnnounce" runat="server" Text="📢 POST ANNOUNCEMENT" Width="180px" Height="40px" />
+                &nbsp;&nbsp;&nbsp;
+                <asp:Button ID="btnManageAttendance" runat="server" Text="📅 MANAGE ATTENDANCE" Width="180px" Height="40px" OnClick="btnManageAttendance_Click" />
             </asp:Panel>
 
             <br /><br />

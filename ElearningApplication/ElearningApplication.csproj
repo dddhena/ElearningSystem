@@ -199,6 +199,7 @@
     <Content Include="View\Feedback\SubmitFeedback.aspx" />
     <Content Include="View\ProgressTracking\StudentProgress.aspx" />
     <Content Include="View\ProgressTracking\Certificate.aspx" />
+    <Content Include="View\ProgressTracking\AttendanceTracking.aspx" />
     <Content Include="View\Instructor\ManageLessons.aspx" />
     <Content Include="View\Instructor\ManageModules.aspx" />
     <Content Include="View\Instructor\UploadMaterial.aspx" />
@@ -374,6 +375,13 @@
     </Compile>
     <Compile Include="View\ProgressTracking\Certificate.aspx.designer.cs">
       <DependentUpon>Certificate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\ProgressTracking\AttendanceTracking.aspx.cs">
+      <DependentUpon>AttendanceTracking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\ProgressTracking\AttendanceTracking.aspx.designer.cs">
+      <DependentUpon>AttendanceTracking.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\Instructor\ManageLessons.aspx.cs">
       <DependentUpon>ManageLessons.aspx</DependentUpon>

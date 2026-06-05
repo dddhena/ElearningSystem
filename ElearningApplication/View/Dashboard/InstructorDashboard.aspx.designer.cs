@@ -24,6 +24,7 @@ namespace ElearningApplication.View.Dashboard
         protected global::System.Web.UI.WebControls.Button btnCreateCourse;
         protected global::System.Web.UI.WebControls.Button btnGradeAssignments;
         protected global::System.Web.UI.WebControls.Button btnAnnounce;
+        protected global::System.Web.UI.WebControls.Button btnManageAttendance;
         protected global::System.Web.UI.WebControls.Label LabelMyCourses;
         protected global::System.Web.UI.WebControls.GridView gvMyCourses;
     }

@@ -106,5 +106,10 @@ namespace ElearningApplication.View.Dashboard
         {
             Response.Redirect("~/View/Course/CreateCourse.aspx");
         }
+
+        protected void btnManageAttendance_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/View/ProgressTracking/AttendanceTracking.aspx");
+        }
     }
 }

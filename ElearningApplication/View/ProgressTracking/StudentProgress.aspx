@@ -519,6 +519,11 @@
                                             </span>
                                         </li>
                                     </ul>
+                                    <div style="margin-top: 14px; text-align: right; border-top: 1px solid var(--border); padding-top: 8px;">
+                                        <a href='<%# "AttendanceTracking.aspx?courseId=" + Eval("CourseId") %>' style="font-size: 13px; color: var(--primary); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 4px;">
+                                            View Detailed Logs ➜
+                                        </a>
+                                    </div>
                                 </div>
 
                                 <!-- Assessments & Assignments -->
