@@ -156,6 +156,7 @@
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
+    <Content Include="Scripts\CourseMaterials.js" />
     <Content Include="Scripts\jquery-3.7.0.slim.js" />
     <Content Include="Scripts\jquery-3.7.0.slim.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
@@ -195,6 +196,8 @@
     <Content Include="View\Course\CreateCourse.aspx" />
     <Content Include="View\Enrollment\Enrollment.aspx" />
     <Content Include="View\Enrollment\EnrollmentDetails.aspx" />
+    <Content Include="View\Enrollment\CourseMaterials.aspx" />
+    <Content Include="View\Feedback\FeedbackSummary.aspx" />
     <Content Include="View\Feedback\MyProgress.aspx" />
     <Content Include="View\Feedback\SubmitFeedback.aspx" />
     <Content Include="View\ProgressTracking\StudentProgress.aspx" />
@@ -346,6 +349,20 @@
     </Compile>
     <Compile Include="View\Enrollment\EnrollmentDetails.aspx.designer.cs">
       <DependentUpon>EnrollmentDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Enrollment\CourseMaterials.aspx.cs">
+      <DependentUpon>CourseMaterials.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Enrollment\CourseMaterials.aspx.designer.cs">
+      <DependentUpon>CourseMaterials.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Feedback\FeedbackSummary.aspx.cs">
+      <DependentUpon>FeedbackSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Feedback\FeedbackSummary.aspx.designer.cs">
+      <DependentUpon>FeedbackSummary.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\Feedback\MyProgress.aspx.cs">
       <DependentUpon>MyProgress.aspx</DependentUpon>
