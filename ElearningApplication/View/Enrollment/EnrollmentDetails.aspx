@@ -71,6 +71,8 @@
                     <asp:Button ID="btnLiveChat" runat="server" Text="LIVE CHAT" OnClick="btnLiveChat_Click" Width="180px" />
                     <asp:Button ID="btnAskQuestion" runat="server" Text="ASK QUESTION" OnClick="btnAskQuestion_Click" Width="180px" />
                     <asp:Button ID="btnMaterials" runat="server" Text="MATERIALS" OnClick="btnMaterials_Click" Width="180px" />
+
+                    <asp:Button ID="btnMaterials" runat="server" Text="MATERIALS" Width="180px" />
                     <asp:Button ID="btnMyProgress" runat="server" Text="MY PROGRESS" OnClick="btnMyProgress_Click" Width="180px" />
                 </div>
             </fieldset>
